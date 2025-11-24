@@ -48,7 +48,7 @@ En aquesta pràctica treballarem només amb nombres enters. Els operadors aritm�
 ```
 
 ```forth
-7 2 mod
+7 2 mod .
 👉  1
 ```
 
@@ -59,8 +59,8 @@ En aquesta pràctica treballarem només amb nombres enters. Els operadors aritm�
 ```forth
 1 2 3 .s swap .s
 👉  
-1 2 3
-1 3 2
+[1, 2, 3]
+[1, 3, 2]
 ```
 
 `2swap`: intercanvia els dos parells d'elements superiors de la pila.
@@ -68,8 +68,8 @@ En aquesta pràctica treballarem només amb nombres enters. Els operadors aritm�
 ```forth
 1 2 3 4 .s 2swap .s
 👉  
-1 2 3 4
-3 4 1 2
+[1, 2, 3, 4]
+[3, 4, 1, 2]
 ```
 
 `dup`: duplica el cim de la pila.
@@ -77,8 +77,8 @@ En aquesta pràctica treballarem només amb nombres enters. Els operadors aritm�
 ```forth
 1 2 .s dup .s
 👉  
-1 2
-1 2 2
+[1, 2]
+[1, 2, 2]
 ```
 
 `2dup`: duplica els dos elements superiors de la pila.
@@ -86,8 +86,8 @@ En aquesta pràctica treballarem només amb nombres enters. Els operadors aritm�
 ```forth
 1 2 3 .s 2dup .s
 👉  
-1 2 3
-1 2 3 2 3
+[1, 2, 3]
+[1, 2, 3, 2, 3]
 ```
 
 `over`: fa un *push* de l'element just per sota del cim.
@@ -95,8 +95,8 @@ En aquesta pràctica treballarem només amb nombres enters. Els operadors aritm�
 ```forth
 1 2 .s over .s
 👉  
-1 2
-1 2 1
+[1, 2]
+[1, 2, 1]
 ```
 
 `2over`: fa un *push* de la parella just per sota de la del cim.
@@ -104,8 +104,8 @@ En aquesta pràctica treballarem només amb nombres enters. Els operadors aritm�
 ```forth
 1 2 3 4 .s 2over .s
 👉  
-1 2 3 4
-1 2 3 4 1 2
+[1, 2, 3, 4]
+[1, 2, 3, 4, 1, 2]
 ```
 
 `rot`: mou el 2on element per sota del cim al cim.
@@ -113,8 +113,8 @@ En aquesta pràctica treballarem només amb nombres enters. Els operadors aritm�
 ```forth
 1 2 3 .s rot .s
 👉  
-1 2 3
-2 3 1
+[1, 2, 3]
+[2, 3, 1]
 ```
 
 `drop`: esborra el cim de la pila.
@@ -122,8 +122,8 @@ En aquesta pràctica treballarem només amb nombres enters. Els operadors aritm�
 ```forth
 1 2 .s drop .s
 👉  
-1 2
-1
+[1, 2]
+[1]
 ```
 
 `2drop`: esborra el parell del cim de la pila.
@@ -131,8 +131,8 @@ En aquesta pràctica treballarem només amb nombres enters. Els operadors aritm�
 ```forth
 1 2 3 .s 2drop .s
 👉  
-1 2 3
-1
+[1, 2, 3]
+[1]
 ```
 
 #### Relacionals i booleans
