@@ -169,7 +169,7 @@ Els condicionals es fan amb la sintaxi `condició if codi_cert else codi_fals en
 : min 2dup < if drop else swap drop endif ; 
 3 2 min .  👉  2
 
-: signe dup 0 < if -1 drop else 0 > if 1 else 0 endif endif ;
+: signe dup 0 < if drop -1 else 0 > if 1 else 0 endif endif ;
 -2 signe .s  👉  [-1]
 0 signe .s  👉  [0]
 ```
