@@ -150,7 +150,7 @@ Els booleans es codifiquen com `0` (fals) i `-1` (cert) i conté els operadors b
 Les funcions utilitzen també la pila per la tranferència d'informació. Es delimiten per `:` i `;`:
 
 ```forth
-: doble * 2 ;
+: doble 2 * ;
 3 doble .
 👉  6
 : f doble 1 + ;
